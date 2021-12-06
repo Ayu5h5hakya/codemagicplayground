@@ -6,13 +6,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const url = String.fromEnvironment("API_URL", defaultValue: "");
     return MaterialApp(
-      title: String.fromEnvironment("API_URL", defaultValue: ""),
+      title: url,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(
-          title: String.fromEnvironment("API_URL", defaultValue: "")),
+      home: MyHomePage(title: url),
     );
   }
 }
